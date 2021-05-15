@@ -1,0 +1,22 @@
+[build]
+target = "x86_64-pc-windows-msvc"
+incremental = true
+
+[target.x86_64-pc-windows-msvc]
+rustflags = [
+    "-C", "linker=lld-link", 
+    "-C", "link-arg=/entry:kernel_main",
+    "-C", "link-arg=/base:0xffff888800000000", 
+    "-C", "link-arg=/subsystem:native",
+    "-C", "link-arg=/filealign:0x1000",
+    "-C", "link-arg=/fixed",
+    "-C", "link-arg=/align:4096", 
+    "-C", "link-arg=/debug:dwarf", 
+    "-C", "link-arg=/nodefaultlib"
+]
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

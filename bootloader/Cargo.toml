@@ -1,0 +1,22 @@
+[package]
+name = "bootloader"
+version = "0.1.0"
+authors = ["ctfhacker <cld251@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# noodle = { path = "./shared/noodle" }
+global_types = { path = "../shared/global_types" }
+cpu_x86      = { path = "../shared/cpu_x86" }
+# page_table   = { path = "../shared/page_table", features = ["verbose"] }
+page_table   = { path = "../shared/page_table", features = [] }
+phys_mem     = { path = "../shared/phys_mem" }
+pe           = { path = "../shared/pe" }
+errchain     = { path = "../shared/errchain" }
+rangeset     = { path = "../shared/rangeset" }
+core_arg     = { path = "../shared/core_arg" }
+
+[profile.release]
+debug = true

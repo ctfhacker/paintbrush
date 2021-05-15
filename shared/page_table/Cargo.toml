@@ -1,0 +1,17 @@
+[package]
+name = "page_table"
+version = "0.1.0"
+authors = ["ctfhacker <cld251@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+global_types = { path = "../../shared/global_types" }
+cpu_x86      = { path = "../../shared/cpu_x86" }
+phys_mem     = { path = "../../shared/phys_mem" }
+errchain     = { path = "../../shared/errchain" }
+
+[features]
+default = []
+verbose = []

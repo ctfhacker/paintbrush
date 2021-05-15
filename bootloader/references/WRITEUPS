@@ -1,0 +1,11 @@
+https://genode.org/documentation/articles/arm_virtualization
+
+https://ashw.io/blog/arm64-hypervisor-tutorial/
+
+https://github.com/hcyang1012/ARM_Hypervisor
+
+# Configuring the GIC (possibly useful for multicore)
+https://www.realdigital.org/doc/87be521204ed2c4447d567b666961ce8
+
+# PI Tutorials
+https://github.com/rust-embedded/rust-raspberrypi-OS-tutorials

@@ -1,0 +1,29 @@
+[build]
+target = "x86_64-unknown-uefi"
+
+[unstable]
+build-std = ["core"]
+
+[target.x86_64-unknown-uefi]
+rustflags = ["-C", "link-arg=/debug:dwarf", 
+             "-C", "link-arg=/base:0x20210000",
+             "-C", "link-arg=/fixed",
+             "-C", "relocation-model=static", 
+             "-C", "code-model=small",
+            ]
+
+[target.aarch64-unknown-uefi]
+rustflags = ["-C", "link-arg=/debug:dwarf",
+             "-C", "link-arg=/base:0x20210000",
+             "-C", "relocation-model=static", 
+             "-C", "code-model=small"
+            ]
+
+[doc.extern-map]
+std = "local"
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

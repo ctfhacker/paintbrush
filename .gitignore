@@ -1,0 +1,22 @@
+/target
+**~
+**/target
+aarch64_build/
+qemu_fs/
+
+
+# Added by cargo
+#
+# already existing elements were commented out
+
+#/target
+
+
+# Added by cargo
+#
+# already existing elements were commented out
+
+#/target
+
+# Don't add the output directory
+build/
